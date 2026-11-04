@@ -1,0 +1,94 @@
+:root {
+  --primary: #2c3e50;       /* тёмно-синий, спокойный */
+  --accent: #c0392b;       /* акцентный красно-коричневый */
+  --bg: #f4f7f6;           /* очень светлый серо-голубой фон */
+  --card-bg: #ffffff;      /* белый фон карточек */
+  --text: #333;            /* тёмно-серый текст вместо чёрного */
+  --light-text: #7f8c8d;   /* приглушённый серый для второстепенного текста */
+}
+
+body {
+  font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+header {
+  background-color: var(--primary);
+  color: #fff;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+header h1 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.4rem;
+}
+
+nav a {
+  color: rgba(255,255,255,0.9);
+  text-decoration: none;
+  margin-right: 1.2rem;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+main {
+  padding: 2rem;
+  max-width: 960px;
+  margin: auto;
+}
+
+/* Карточки для секций — делают страницу аккуратнее */
+.card {
+  background: var(--card-bg);
+  padding: 1.8rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  margin-bottom: 1.5rem;
+  border-left: 5px solid var(--accent);
+}
+
+h2 {
+  color: var(--primary);
+  margin-top: 0;
+  font-size: 1.3rem;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 0.4rem;
+}
+
+ul {
+  list-style-position: inside;
+}
+
+li {
+  margin-bottom: 0.3rem;
+}
+
+strong {
+  color: var(--accent);
+}
+
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  color: var(--light-text);
+  font-size: 0.9rem;
+  margin-top: 2rem;
+}
+
+/* Адаптив: на мобильных уменьшаем отступы */
+@media (max-width: 600px) {
+  header h1 { font-size: 1.1rem; }
+  main { padding: 1rem; }
+  .card { padding: 1.2rem; }
+  nav a { display: block; margin: 0.5rem 0; }
+}
+
